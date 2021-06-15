@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/estilos.css">       
+    <title>Historial</title>
+</head>
+<body>
+    <!-- menú -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="index.html">Fundación de Apoyo</a>
+      <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="#">Servicios</a>
+      <a class="nav-link" href="historial.html">Historial</a>
+      <a class="nav-link" href="donaciones.html"><button type="button" class="btn btn-primary">Donar</button></a>
+      <a class="nav-link" href="#"><button type="button" id="btnFloatingW" class="btn btn-primary"data-toggle="modal" data-target="#loginModal" data-whatever="@mdo">Ingresar</button></a>
+    </nav>
+
+    <!-- TABLA HISTORIAL  -->
+    <!--https://www.youtube.com/watch?v=dOhfuLnWvpU-->
+    <!--https://www.youtube.com/watch?v=fI-VZwIFtwI-->
+    <table class=".tablesorter" id="atenciones" cellspacing="0px" bgcolor="ffffff" cellpadding="10px 0px 0px 0p" border="1" width="100%" style="margin:50px 50px 0px 0px">
+        <thead>
+        <tr>
+            <th>Nombre paciente</th>
+            <th>Nombre profesional</th>
+            <th>Descripción del cuidado</th>
+            <th>Fecha</th>
+        </tr>
+        </thead>
+        <tbody id="contenedorTablaHistorialCuidados">
+        <!--En este espacio contendrá la tabla generada-->
+        </tbody>
+    </table>
+    
+    <!-- login flotante -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+        <button type="button" onClick='limpiarForm();' class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <!-- <form action="" method="POST" id="formLogReg"> -->
+            <div class="row">
+            <div class="col-6">
+                <h5>Registro</h5>
+            </div>
+            <div class="col-6">
+                <h5>Inicio de Sesión</h5>
+            </div>
+            </div>
+            <hr>
+            <div class="row">
+
+            <!-- Registrarse -->
+            <div class="col-6">
+                <form action="" method="POST" id="formReg">
+                <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Nombre</label>
+                    <input type="text" required class="form-control" id="nombreReg">
+                    <div class="invalid-feedback" id="errorNombre"></div>
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Correo Electrónico</label>
+                    <input type="email" required class="form-control" id="correoReg">
+                    <div class="invalid-feedback" id="errorEmail"></div>
+
+                </div>
+                <div class="form-group">
+                    <label for="message-text" class="col-form-label">Constraseña</label>
+                    <input type="password" required class="form-control" id="contraReg">
+                    <div class="invalid-feedback" id="errorPass"></div>
+
+                </div>
+                <button class="btn btn-primary" type="submit" id="btnReg">Registrarse</button>
+                </form>  
+            </div>
+
+            <!-- inicio sesion -->
+            <div class="col-6">
+                <form action="" method="POST" id="formLog">
+                <div class="form-group">
+                    <label for="correoLog" class="col-form-label">Correo Electrónico</label>
+                    <input type="email" required class="form-control" id="correoLog">
+                    <div class="invalid-feedback" id="errorEmailL"></div>
+                </div>
+                <div class="form-group">
+                    <label for="contraLog" class="col-form-label">Contraseña</label>
+                    <input type="password" required class="form-control" id="contraLog">
+                    <div class="invalid-feedback" id="errorPassL"></div>
+
+                </div>                
+                <button class="btn btn-primary" type="submit" id="btnLog">Iniciar Sesión</button>
+                </form>
+            </div>    
+            </div> 
+        </div>
+    </div> 
+    </div>
+    
+    <!-- link js -->
+    <script src="../js/jquery-3.6.0.js"></script>
+    <script src="../js/popper.js"></script> 
+    <script src="../js/httpRequest.js"></script>
+    <script src="../js/tablas.js"></script>
+    <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
+    <script src="../js/bootstrap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+</body>
+</html>               
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
