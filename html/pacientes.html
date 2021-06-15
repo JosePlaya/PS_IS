@@ -28,7 +28,27 @@
     <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Buscar paciente" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+    </form>
+
+    <!-- TABLA PACIENTE  -->
+    <!--https://www.youtube.com/watch?v=dOhfuLnWvpU-->
+    <!--https://www.youtube.com/watch?v=fI-VZwIFtwI-->
+    <table class=".tablesorter" id="pacientes" cellspacing="0px" bgcolor="ffffff" cellpadding="10px 0px 0px 0p" border="1" width="100%" style="margin:50px 50px 0px 0px">
+        <thead>
+        <tr>
+            <th>Nombre paciente</th>
+            <th>Edad</th>
+            <th>Habitación</th>
+            <th>Fecha ingreso</th>
+            <th>Medicamentos</th>
+            <th>Tratamientos</th>
+        </tr>
+        </thead>
+        <tbody id="contenedorTablaPacientes">
+        <!--En este espacio contendrá la tabla generada-->
+        </tbody>
+    </table>
+
 <!-- footer -->
 <div class="footer-basic">
     <footer>
@@ -122,6 +142,7 @@
       <script src="../js/httpRequest.js"></script>
       <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
       <script src="../js/bootstrap.js"></script>
+      <script src="../js/tablaPacientes.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>

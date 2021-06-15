@@ -1,10 +1,11 @@
+//TABLA STOCK INSUMOS
 //Controlador tabla trabajador
-function generarTablaTrabajador(){
+function generarTablaPacientes(){
     console.log("INICIANDO PROCESO DE CRACIÓN DE TABLA...")
     //Obtener el número de trabajadores
-    var nTrabajadores = 10;
+    var nTrabajadores = 8;
     //Obtener la instancia de la tabla donde se incertaran los datos
-    var contenderoTabla = document.getElementById("contenedorTablaHistorialCuidados")
+    var contenderoTabla = document.getElementById("contenedorTablaPacientes")
 
     //Iniciar el contenedor vacio
     contenderoTabla.innerHTML = ""
@@ -17,26 +18,38 @@ function generarTablaTrabajador(){
         tabla += "<tr>";
 
         //Tiene que haber un <td> por cada columna creada
-        //Columna 1: Imagen 
+        //Columna 1: Nombre paciente 
         tabla += "<td>";
-        tabla += "Rodolfo Amancio";
+        tabla += "Eduardo Sánchez P.";
         //tabla += "<a href='detalleTrabajo.html'><img src='https://picsum.photos/100/100' alt='foto atencion'></a>";
         tabla += "</td>";
 
-        //Columna 2: Nombre Trabajador 
+        //Columna 2: Edad paciente 
         tabla += "<td>";
-        tabla += "Carlos Padget L.";
+        tabla += "8"+i+" años";
+        tabla += "</td>";
+
+        //Columna 3: Habitación
+        tabla += "<td>";
+        tabla += "30"+i;
+        tabla += "</td>";
+
+        //Columna 4: Fecha ingreso
+        tabla += "<td>";
+        tabla += "1"+i+"/0"+(i+1)+"/2018";
+        tabla += "</td>";
+
+        //Columna 4: Medicamentos
+        tabla += "<td>";
+        tabla += "Aspirina y armonil";
         tabla += "</td>";
 
         //Columna 3: Descripción
         tabla += "<td>";
-        tabla += "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan arcu non egestas dapibus. Nunc dolor leo, imperdiet in dapibus sodales, vehicula vitae sem. Nullam eleifend sed nisi feugiat tincidunt. Maecenas a neque sit amet elit ornare varius et quis turpis. Nunc sagittis, dolor et euismod tincidunt, erat ligula lacinia.";
+        tabla += "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan arcu non egestas dapibus. Nunc dolor leo, imperdiet in dapibus sodales.";
         tabla += "</td>";
 
-        //Columna 4: Fecha
-        tabla += "<td>";
-        tabla += "15/11/1888";
-        tabla += "</td>";
+        
 
         tabla += "</tr>";
     }
@@ -48,5 +61,7 @@ function generarTablaTrabajador(){
 
     console.log("PROCESO FINALIZADO")
 }
+
+
 //Carga los datos automáticamente al iniciar la vista
-window.onload = generarTablaTrabajador();
+window.onload = generarTablaPacientes();
