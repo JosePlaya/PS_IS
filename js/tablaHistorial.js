@@ -31,7 +31,7 @@ function generarTablaHistorial(){
 
         //Columna 3: Descripción
         tabla += "<td>";
-        tabla += "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse accumsan arcu non egestas dapibus. Nunc dolor leo, imperdiet in dapibus sodales, vehicula vitae sem. Nullam eleifend sed nisi feugiat tincidunt. Maecenas a neque sit amet elit ornare varius et quis turpis. Nunc sagittis, dolor et euismod tincidunt, erat ligula lacinia.";
+        tabla += "Revisión general semanal.";
         tabla += "</td>";
 
         //Columna 4: Fecha
