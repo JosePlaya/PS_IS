@@ -37,16 +37,22 @@
     </form>
 
 
-    <table class=".tablesorter" id="stock" cellspacing="0px" bgcolor="ffffff" cellpadding="10px 0px 0px 0p" border="1" width="100%" style="margin:50px 50px 0px 0px">
+    <!-- BTN Calificar servicio -->
+    <div style="margin:50px 10px 30px 250px">
+        <form class="form-inline my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Calificar</button>
+        </form>
+    </div>
+
+
+    <table class=".tablesorter" id="stock" cellspacing="0px" bgcolor="ffffff" cellpadding="10px 0px 0px 0p" border="1" width="300px" style="margin:10px 50px 30px 30px">
         <thead>
         <tr>
-            <th>Nombre insumo</th>
-            <th>Cantidad</th>
-            <th>Descripción del insumo</th>
-            <th>Fecha vencimiento</th>
+            <th>Fecha</th>
+            <th>Calificacion</th>
         </tr>
         </thead>
-        <tbody id="contenedorTablaStockInsumos">
+        <tbody id="contenedorCalificaciones">
         <!--En este espacio contendrá la tabla generada-->
         </tbody>
     </table>
@@ -142,7 +148,7 @@
     <script src="../js/httpRequest.js"></script>
     <!-- <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script> -->
     <script src="../js/bootstrap.js"></script>
-    <script src="../js/tablaStock.js"></script>
+    <script src="../js/tablaCalificaciones.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
